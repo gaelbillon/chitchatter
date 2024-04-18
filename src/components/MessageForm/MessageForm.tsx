@@ -95,10 +95,15 @@ export const MessageForm = ({
             value={textMessage}
             onChange={handleMessageChange}
             onKeyPress={handleMessageKeyPress}
-            size="medium"
+            size="small"
             placeholder="Your message"
             inputRef={textFieldRef}
             multiline
+            sx={{
+              '& .Mui-focused .MuiOutlinedInput-notchedOutline': {
+                borderColor: '#A33D52 !important',
+              },
+            }}
           />
         </FormControl>
         <Fab
@@ -106,11 +111,16 @@ export const MessageForm = ({
             flexShrink: 0,
             // The !important is needed to override a Stack style
             marginTop: 'auto!important',
+            backgroundColor: '#964654',
+            '&:hover': {
+              backgroundColor: '#362021',
+            },
           }}
           aria-label="Send"
           type="submit"
           disabled={!canMessageBeSent()}
           color="primary"
+          size="small"
         >
           <ArrowUpward />
         </Fab>

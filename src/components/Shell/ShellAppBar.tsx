@@ -68,7 +68,7 @@ interface ShellAppBarProps {
   onPeerListClick: () => void
   onRoomControlsClick: () => void
   setIsQRCodeDialogOpen: (isOpen: boolean) => void
-  showAppBar: boolean
+  showAppBar: false
   isFullscreen: boolean
   setIsFullscreen: (isFullscreen: boolean) => void
 }

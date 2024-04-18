@@ -96,10 +96,10 @@ export const Message = ({ message, showAuthor, userId }: MessageProps) => {
 
   if (message.authorId === userId) {
     backgroundColor = isMessageReceived(message)
-      ? 'primary.main'
-      : 'primary.light'
+      ? '#A33D52'
+      : 'rgba(163, 61, 82, 0.5)'
   } else {
-    backgroundColor = 'secondary.main'
+    backgroundColor = '#362021'
   }
 
   return (
