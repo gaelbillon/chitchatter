@@ -2,16 +2,16 @@ import { styled, useTheme } from '@mui/material/styles'
 
 import IconButton from '@mui/material/IconButton'
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar'
-import Fab from '@mui/material/Fab'
+// import Fab from '@mui/material/Fab'
 import StepIcon from '@mui/material/StepIcon'
 import Toolbar from '@mui/material/Toolbar'
 import Tooltip from '@mui/material/Tooltip'
 import Typography from '@mui/material/Typography'
 import Slide from '@mui/material/Slide'
-import Zoom from '@mui/material/Zoom'
+// import Zoom from '@mui/material/Zoom'
 import Divider from '@mui/material/Divider'
 
-import ExpandMore from '@mui/icons-material/ExpandMore'
+// import ExpandMore from '@mui/icons-material/ExpandMore'
 import Fullscreen from '@mui/icons-material/Fullscreen'
 import FullscreenExit from '@mui/icons-material/FullscreenExit'
 import Link from '@mui/icons-material/Link'
@@ -68,7 +68,7 @@ interface ShellAppBarProps {
   onPeerListClick: () => void
   onRoomControlsClick: () => void
   setIsQRCodeDialogOpen: (isOpen: boolean) => void
-  showAppBar: false
+  showAppBar: boolean
   isFullscreen: boolean
   setIsFullscreen: (isFullscreen: boolean) => void
 }
@@ -208,7 +208,7 @@ export const ShellAppBar = ({
           </Toolbar>
         </AppBar>
       </Slide>
-      <Zoom
+      {/*      <Zoom
         style={{ position: 'absolute', left: '16px', top: '16px' }}
         in={!showAppBar}
         unmountOnExit
@@ -223,7 +223,7 @@ export const ShellAppBar = ({
             <ExpandMore />
           </Fab>
         </Tooltip>
-      </Zoom>
+      </Zoom>*/}
     </>
   )
 }

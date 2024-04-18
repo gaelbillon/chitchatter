@@ -22,7 +22,7 @@ export const PeerNameDisplay = ({
         {friendlyName}
         <Typography variant="caption" {...rest}>
           {' '}
-          ({getPeerName(userId)})
+          {/*({getPeerName(userId)})*/}
         </Typography>
       </Typography>
     )
