@@ -23,6 +23,8 @@ import { useContext } from 'react'
 
 import { ShellContext } from 'contexts/ShellContext'
 
+import { UserInfo } from 'components/UserInfo'
+
 import { drawerWidth } from './Drawer'
 import { peerListWidth } from './PeerList'
 
@@ -74,6 +76,7 @@ interface ShellAppBarProps {
 }
 
 export const ShellAppBar = ({
+  userId,
   onDrawerOpen,
   onLinkButtonClick,
   isDrawerOpen,
@@ -195,6 +198,7 @@ export const ShellAppBar = ({
                 </IconButton>
               </Tooltip>
             )}
+            <UserInfo userId={userId} />
             <Tooltip title="Click to show peer list">
               <IconButton
                 size="large"

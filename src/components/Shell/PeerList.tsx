@@ -1,14 +1,14 @@
 import { PropsWithChildren } from 'react'
 import List from '@mui/material/List'
 import ListItemIcon from '@mui/material/ListItemIcon'
-import ListItemText from '@mui/material/ListItemText'
+// import ListItemText from '@mui/material/ListItemText'
 import Divider from '@mui/material/Divider'
 import VolumeUp from '@mui/icons-material/VolumeUp'
 import ListItem from '@mui/material/ListItem'
 import Box from '@mui/material/Box'
 import CircularProgress from '@mui/material/CircularProgress'
 
-import { UserInfo } from 'components/UserInfo'
+// import { UserInfo } from 'components/UserInfo'
 import {
   AudioState,
   Peer,
@@ -23,7 +23,7 @@ import { PeerListHeader } from './PeerListHeader'
 import { PeerListItem } from './PeerListItem'
 import { ConnectionTestResults as IConnectionTestResults } from './useConnectionTest'
 
-export const peerListWidth = 300
+export const peerListWidth = 280
 
 export interface PeerListProps extends PropsWithChildren {
   userId: string
@@ -61,9 +61,9 @@ export const PeerList = ({
               <VolumeUp />
             </ListItemIcon>
           )}
-          <ListItemText>
+          {/*<ListItemText>
             <UserInfo userId={userId} />
-          </ListItemText>
+          </ListItemText>*/}
         </ListItem>
         {peerList.map((peer: Peer) => (
           <PeerListItem

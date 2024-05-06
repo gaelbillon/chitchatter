@@ -1,7 +1,7 @@
 import { useState, useContext, ChangeEvent, SyntheticEvent } from 'react'
 import TextField from '@mui/material/TextField'
 import FormControl from '@mui/material/FormControl'
-import FormHelperText from '@mui/material/FormHelperText'
+// import FormHelperText from '@mui/material/FormHelperText'
 import Button from '@mui/material/Button'
 import Box from '@mui/material/Box'
 // import IconButton from '@mui/material/IconButton'
@@ -19,6 +19,8 @@ import { getPeerName } from 'components/PeerNameDisplay'
 import { SettingsContext } from 'contexts/SettingsContext'
 import { PublicKey } from 'components/PublicKey'
 import { PeerNameDisplay } from 'components/PeerNameDisplay'
+
+import Typography from '@mui/material/Typography'
 
 interface UserInfoProps {
   userId: string
@@ -78,12 +80,21 @@ export const UserInfo = ({ userId }: UserInfoProps) => {
       <form onSubmit={handleSubmit}>
         <FormControl sx={{ width: '100%' }}>
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
+            <Typography
+              variant="caption"
+              sx={{
+                pr: 1,
+              }}
+            >
+              Username{' '}
+            </Typography>
             <TextField
               onChange={handleChange}
               onBlur={handleBlur}
               variant="outlined"
               label={`${userName}`}
               sx={{ width: '100%' }}
+              size="small"
               value={inflightCustomUsername}
               inputProps={{ maxLength: maxCustomUsernameLength }}
             />
@@ -99,7 +110,7 @@ export const UserInfo = ({ userId }: UserInfoProps) => {
               </IconButton>
             </Tooltip>*/}
           </Box>
-          <FormHelperText>Your username</FormHelperText>
+          {/*<FormHelperText>Your username</FormHelperText>*/}
         </FormControl>
       </form>
       <Dialog open={isInfoDialogOpen} onClose={handleInfoDialogClose}>

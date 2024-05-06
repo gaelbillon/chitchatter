@@ -353,6 +353,7 @@ export const Shell = ({ appNeedsUpdate, children, userPeerId }: ShellProps) => {
                 onAlertClose={handleAlertClose}
               />
               <ShellAppBar
+                userId={userPeerId}
                 onDrawerOpen={handleDrawerOpen}
                 onLinkButtonClick={handleLinkButtonClick}
                 isDrawerOpen={isEmbedded ? false : isDrawerOpen}
