@@ -164,33 +164,37 @@ export const ShellAppBar = ({
                 sx={{ height: theme.spacing(3.5), mx: theme.spacing(1) }}
               />
             )}
-            <Tooltip
-              title={
-                showRoomControls ? 'Hide Room Controls' : 'Show Room Controls'
-              }
-            >
-              <IconButton
-                size="large"
-                color="inherit"
-                aria-label="show room controls"
-                onClick={onRoomControlsClick}
+            {isEmbedded ? null : (
+              <Tooltip
+                title={
+                  showRoomControls ? 'Hide Room Controls' : 'Show Room Controls'
+                }
               >
-                <RoomPreferences />
-              </IconButton>
-            </Tooltip>
-            <Tooltip
-              title={isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen'}
-            >
-              <IconButton
-                size="large"
-                edge="end"
-                color="inherit"
-                aria-label="fullscreen"
-                onClick={onClickFullscreen}
+                <IconButton
+                  size="large"
+                  color="inherit"
+                  aria-label="show room controls"
+                  onClick={onRoomControlsClick}
+                >
+                  <RoomPreferences />
+                </IconButton>
+              </Tooltip>
+            )}
+            {isEmbedded ? null : (
+              <Tooltip
+                title={isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen'}
               >
-                {isFullscreen ? <FullscreenExit /> : <Fullscreen />}
-              </IconButton>
-            </Tooltip>
+                <IconButton
+                  size="large"
+                  edge="end"
+                  color="inherit"
+                  aria-label="fullscreen"
+                  onClick={onClickFullscreen}
+                >
+                  {isFullscreen ? <FullscreenExit /> : <Fullscreen />}
+                </IconButton>
+              </Tooltip>
+            )}
             <Tooltip title="Click to show peer list">
               <IconButton
                 size="large"

@@ -4,15 +4,15 @@ import FormControl from '@mui/material/FormControl'
 import FormHelperText from '@mui/material/FormHelperText'
 import Button from '@mui/material/Button'
 import Box from '@mui/material/Box'
-import IconButton from '@mui/material/IconButton'
+// import IconButton from '@mui/material/IconButton'
 import Dialog from '@mui/material/Dialog'
 import DialogActions from '@mui/material/DialogActions'
 import DialogContent from '@mui/material/DialogContent'
 import DialogContentText from '@mui/material/DialogContentText'
 import DialogTitle from '@mui/material/DialogTitle'
-import Tooltip from '@mui/material/Tooltip'
-import useTheme from '@mui/material/styles/useTheme'
-import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined'
+// import Tooltip from '@mui/material/Tooltip'
+// import useTheme from '@mui/material/styles/useTheme'
+// import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined'
 
 import { ShellContext } from 'contexts/ShellContext'
 import { getPeerName } from 'components/PeerNameDisplay'
@@ -27,7 +27,7 @@ interface UserInfoProps {
 const maxCustomUsernameLength = 30
 
 export const UserInfo = ({ userId }: UserInfoProps) => {
-  const theme = useTheme()
+  // const theme = useTheme()
   const userName = getPeerName(userId)
 
   const { customUsername, setCustomUsername, showAlert } =
@@ -65,9 +65,9 @@ export const UserInfo = ({ userId }: UserInfoProps) => {
     updateCustomUsername()
   }
 
-  const handleInfoButtonClick = () => {
-    setIsInfoDialogOpen(true)
-  }
+  // const handleInfoButtonClick = () => {
+  //   setIsInfoDialogOpen(true)
+  // }
 
   const handleInfoDialogClose = () => {
     setIsInfoDialogOpen(false)
@@ -87,7 +87,7 @@ export const UserInfo = ({ userId }: UserInfoProps) => {
               value={inflightCustomUsername}
               inputProps={{ maxLength: maxCustomUsernameLength }}
             />
-            <Tooltip title="Reveal your user info">
+            {/*<Tooltip title="Reveal your user info">
               <IconButton
                 sx={{
                   ml: 1.5,
@@ -97,7 +97,7 @@ export const UserInfo = ({ userId }: UserInfoProps) => {
               >
                 <InfoOutlinedIcon fontSize="large" />
               </IconButton>
-            </Tooltip>
+            </Tooltip>*/}
           </Box>
           <FormHelperText>Your username</FormHelperText>
         </FormControl>

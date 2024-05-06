@@ -264,12 +264,9 @@ export const Shell = ({ appNeedsUpdate, children, userPeerId }: ShellProps) => {
       setShowAppBar(false)
     } else {
       exitFullscreen()
-      setShowAppBar(false)
-      setShowRoomControls(false)
-
+      setShowAppBar(true)
       if (!isEmbedded) {
-        setShowRoomControls(false)
-        setShowAppBar(false)
+        setShowRoomControls(true)
       }
     }
   }, [isFullscreen, setShowRoomControls, setShowAppBar, isEmbedded])
